@@ -1,0 +1,516 @@
+		.tips{
+			    position: fixed;
+			    font-size: 0.32rem;
+			    z-index: 9999;
+			    color: #fff;
+			    top: 50%;
+			    display: -webkit-box;
+			    -webkit-box-align: center;
+			    -webkit-box-pack: center;
+			    width: 100%;
+			   
+		}
+		.tips span{
+			background: rgba(255,255,255,.1);
+			padding: 0.2rem;
+		    border-radius: 0.1rem;
+		}
+		.overHide{
+			height: 100%;
+			overflow: hidden;
+		}
+		.top{
+			height: 0.88rem;
+			text-align: center;
+		}
+		.top .info{
+			padding-top: 0.2rem;
+			color: #fff;
+			font-size: 0.24rem;
+			display: inline-block;
+			width: 70%;
+		}
+		.top .info span{
+			line-height: 0.52rem;
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+		}
+		.top .info span.songName{
+			font-size: 0.32rem;
+		}
+		.top .back{
+			position: absolute;
+			width: 1rem;
+			height: 1rem;
+			left: 0;
+			top: 0;
+		}
+		.top .back:after{
+			content: "";
+			position: absolute;
+			top: 0.2rem;
+			left: 0.24rem;
+			display: block;
+			width: 0.28rem;
+			height: 0.28rem;
+			border-left: 2px #fff solid;
+			border-top: 2px #fff solid;
+			transform: rotateZ(-135deg);
+		}
+		.bottom{
+			position: absolute;
+			bottom: 0;
+			left:0;
+			padding:0.12rem;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.bottom .line-2{
+			display: flex;
+			height: 0.48rem;
+			width: 100%;
+			font-size: 0;
+			margin: 0.24rem 0;
+		}
+		.timer{
+			text-align: center;
+			width: 0.96rem;
+			color: #fff;
+			line-height: 0.48rem;
+			font-size: 0.28rem;
+			display: inline-block;
+		}
+		.bottom .line-2>div{
+			position: relative;
+			height: 0.48rem;
+			display: inline-block;
+			-webkit-flex:1;
+			margin: 0 0.28rem;
+			flex:1;
+		}
+		.line-2 div>span{
+			display: block;
+		}
+		.line-2 .bar-t, .line-2 .bar-b{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -1px;
+			width: 0%;
+			height: 2px;
+			border-radius: 1px;
+		}
+		.line-2 .bar-t{
+			z-index: 5;
+			background: #ffe331;
+		}
+		.line-2 .bar-b{
+			background: rgba(255,255,255,.5);
+		}
+		.line-2 .point{
+			background-color: #ffe12e;
+			width: 0.36rem;
+			height: 0.36rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			margin: -0.16rem 0 0 -0.16rem;
+		}
+
+		.bottom .line-3{
+			margin:0 auto 0.24rem auto;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+		}
+		.line-3 i{
+			display:block;
+			line-height: 1.2rem;
+			text-align: center;
+			color: #fecc2d;
+			margin: 0 0.24rem;
+		}
+		.control{
+			font-size: 1.08rem;
+			/*width: 30.48%;*/
+		}
+		.pre, .next{
+			font-size: 0.72rem;
+			/*width: 19.51%;*/
+			top: -0.75rem;
+		}
+		.order, #list{
+			/*width: 15.24%;*/
+			font-size:0.64rem;
+		}
+		
+		.bottom .line-4{
+			margin:0 auto;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+		}
+
+		.line-4 i{
+			display:block;
+			font-size: 0.48rem;
+			line-height: 0.72rem;
+			text-align: center;
+			margin:0 0.28rem;
+			color: #fff;
+			opacity: .5;
+		}
+		#queue{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			bottom: 0;			
+			z-index: 998;			
+			box-sizing: border-box;
+			transition: opacity 300ms ease;
+			transition-delay: 300ms;
+		}
+		#queue>div{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			left: 0;
+			background: rgba(9,13,20,.9);
+			overflow:hidden;
+			padding-left: 0.28rem;
+			padding-right: 0.2rem;
+			color: #fff;
+		}
+		#queue .dl-wrapper{
+			height: 6.72rem;
+			overflow-y: auto;
+		}
+		#queue .amount{
+			position: relative;
+			font-size: 0.36rem;
+			line-height: 0.72rem;
+		}
+		#queue .list{
+			position: relative;
+			font-size: 0.28rem;
+			height: 0.96rem;
+			line-height: 0.96rem;
+			font-size: 0;
+		}
+		#queue .list .singer{
+			font-size: 0.24rem;
+		}
+		#queue dl .list span{
+			    display: inline-block;
+			    font-size: 0.28rem;
+			    max-width: 40%;
+			    overflow-x: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+		}
+		#queue .list:after, #queue .amount:after{
+			content: '';
+			position: absolute;
+			left: -50%;
+			bottom: -3px;
+			height: 1px;
+			width: 200%;
+			background: rgba(255,255,255,.1);
+			transform: scale(.5);
+		}
+		#queue .list #del{
+		    color: rgba(255,255,255,.5);
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    font-size: 0.32rem;
+		    width: 0.72rem;
+		    text-align: center;
+		    padding-left: 0.24rem;
+		    display: inline-block;
+		}
+		#queue .list .singer{
+			opacity: .5;
+			margin-left: 0.24rem;
+		}
+		#queue #shut{
+		    display: block;
+		    font-size: 0.32rem;
+		    line-height: 0.96rem;
+		    text-align: center;
+		    height: 0.96rem;
+		}
+		.amount .order{
+		    line-height: 0.72rem;
+		    position: absolute;
+		    right: 0.8rem;
+		    color: rgba(255,255,255,.5);
+		}
+		.amount .clearAll{
+		    width: 0.72rem;
+		    font-size: 0.32rem;
+		    text-align: center;
+		    position: absolute;
+		    right: 0;
+		    color: rgba(255,255,255,.5);
+		}
+
+		#more, #setting{
+			z-index: 5;
+			position: fixed;
+			width: 100%;
+			padding:0.2rem;
+			box-sizing: border-box;	
+			bottom:0;
+			background: rgba(9,13,20,.9);
+			color: #fff;
+			transition: all 300ms ease;
+			transition-delay: 100ms;
+		}
+		.list_icon ul{
+			width: 100%;
+			font-size: 0;
+		}
+		.list_icon li{
+			display: inline-block;
+			width: 25%;
+			line-height: 0.72rem;
+			margin:0.1rem 0;
+		}
+		.list_icon .iconfont{
+			display: block;	
+			font-size: 0.72rem;
+			height: 1.2rem;
+			width: 1.2rem;
+			line-height: 1.2rem;
+			text-align: center;
+			margin:0 auto;
+			background: rgb(9,13,20);
+			border-radius: 15%;
+		}
+		.list_icon span{
+			line-height: 0.48rem;
+			font-size: 0.32rem;
+			display: block;
+			text-align: center;
+		}
+		.volume{
+			margin-top: 0.48rem;
+			position: relative;
+			width: 100%;
+			height: 0.48rem;
+			line-height: 0.48rem;
+		}
+		.volume i{
+			position: absolute;
+			left: 0.1rem;
+			font-size: 0.4rem;
+			width: 0.48rem;
+			height: 0.48rem;
+			line-height: 0.48rem;
+		}
+		.volume .progress{
+			width: 85%;
+			position: relative;
+			height: 0.48rem;
+			left: 0.6rem;
+		}
+		.volume .progress span{
+			display: block;
+		}
+		.volume .bar-t, .volume .bar-b{
+			position: absolute;
+			top:50%;
+			margin-top: -1px;
+			height: 2px;
+			width: 100%;
+		}
+		.volume .bar-t{
+			background: #fecc2d;
+			z-index: 12;
+		}
+		.volume .bar-b{
+			background: rgba(255,255,255,1);
+		}
+		.volume .point{
+			width: 0.32rem;
+			height: 0.32rem;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			top: 50%;
+			margin-top: -0.16rem;
+			left: 10%;
+		}
+		#more .shut, #setting .shut{
+			margin-top: 0.2rem;
+			display: block;
+			font-size: 0.36rem;
+			line-height: 0.72rem;
+			text-align: center;
+		}
+		.line-1{
+			overflow-x:hidden; 
+			width: 100%;
+			height:0.48rem;
+			position: relative;
+			top:0;
+			margin-bottom: 0.24rem;
+		}
+		.line-1 i{
+			display: block;
+			font-size: 0.48rem;
+			color: #fff;
+		}
+		.line-1 .sing{
+			position: absolute;
+			left: 0.24rem;
+			top:0;
+		}
+		.line-1 .setting{
+			position: absolute;
+			top: 0;
+			right:0.24rem;
+		}
+		.currentsong{
+			color:#fecc2d;
+		}
+		#queue .currentsong .Icon_pause{
+			visibility: visible;
+		}
+		.mask{
+			transition:opacity 300ms ease;
+			-webkit-transition:opacity 300ms ease;
+			z-index: 995;
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-color: rgba(9,13,20,.3);
+			opacity: 0;
+		}
+		/*播放列表动画*/
+		#queue .Icon_pause{
+			position: absolute;
+			font-size: 0;
+			display: inline;
+			right: 0.92rem;
+			top: 0.28rem;
+    		visibility: hidden;
+    		line-height: 0.96rem;
+		}
+		.Icon_pause span{
+			display: inline;
+			width: 0.048rem;
+			background-color:#fecc2d;
+		}
+		.Icon_pause span:nth-child(1){
+			height: 0.2rem;
+		}
+		.Icon_pause span:nth-child(2){
+			height: 0.48rem;
+			margin-left: 0.048rem;
+		}
+		.Icon_pause span:nth-child(3){
+			height: 0.384rem;
+			margin-left: 0.048rem;
+		}
+		.Icon_pause span:nth-child(4){
+			height: 0.28rem;
+			margin-left: 0.048rem;
+		}
+
+		#queue .Icon_playing{
+			position: absolute;
+			font-size: 0;
+			display: inline;
+			right: 0.72rem;
+			top: 0.288rem;
+    		line-height: 0.96rem;
+		}
+		.Icon_playing span{
+			-webkit-transition:height 300ms ease;
+			display: inline;
+			width: 0.048rem;
+			background-color:#fecc2d;
+		}
+		.Icon_playing span:nth-child(1){
+			-webkit-animation: up_1 .5s infinite ease;
+			height: 0.2rem;
+		}
+		.Icon_playing span:nth-child(2){
+			-webkit-animation: down_1 .5s infinite ease;
+			height: 0.384rem;
+			margin-left: 0.048rem;
+		}
+		.Icon_playing span:nth-child(3){
+			-webkit-animation: up_2 .5s infinite ease;
+			height: 0.6rem;
+			margin-left: 0.048rem;
+		}
+		.Icon_playing span:nth-child(4){
+			-webkit-animation: down_2 .5s infinite ease;
+			height: 0.14rem;
+			margin-left:0.048rem;
+		}
+		@-webkit-keyframes up_1{
+			0%{height: 0.2rem}
+			50%{height: 0.38rem}
+			100%{height: 0.2rem}
+		}
+		@-webkit-keyframes up_2{
+			0%{height: 0.14rem}
+			50%{height: 0.28rem}
+			100%{height: 0.14rem}
+		}
+		@-webkit-keyframes down_1{
+			0%{height: 0.36rem}
+			50%{height: 0.2rem}
+			100%{height: 0.38rem}
+		}
+		@-webkit-keyframes down_2{
+			0%{height: 0.28rem}
+			50%{height: 0.14rem}
+			100%{height: 0.28rem}
+		}
+		#lyrics{
+			opacity: .9;
+			position: absolute;
+		    bottom: 3.8rem;
+		    left: 12.5%;
+		    width: 75%;
+		    height: 7.92rem;
+		    /*background: rgba(255,0,0,.3);*/
+		    color: rgb(220,220,220);
+		    font-size: 0.28rem;
+		    font-weight: 200;
+		    text-align: center;
+		    overflow: hidden;
+		    box-sizing:border-box;
+		}
+		ul li{
+			list-style-type: none;
+		}
+		#lyrics ul{
+			transition:transform 1s ease;
+			-webkit-transition:transform 1s ease;
+		}
+		#lyrics ul li{
+			line-height: 0.72rem;
+		}
+		#lyrics ul .on{
+			color: #fecc2d;
+			font-size: 0.32rem;
+			font-weight: 400;
+		}
+		#lyrics ul .fadeout{
+			color: rgba(220,220,220,.5);
+		}
+
+

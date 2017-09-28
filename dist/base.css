@@ -1,0 +1,43 @@
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*+height:1%;}
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        -webkit-text-size-adjust: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    a{
+        text-decoration: none;
+    }
+    img {
+        border: 0;
+        vertical-align: top;
+    }
+    ol, ul, dl{
+            list-style: none;
+    }
+    body, html {
+        font-family: "PingFang SC","Heiti SC","SF UI Text","Helvetica Neue",Roboto,"Droid Sans Fallback",arial,sans-serif;
+        font-weight: normal;
+    }
+    html {
+        color: #000;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: 100px;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+    }
+    @font-face {                                                
+    font-family:JHSIconfont;src:url(http://at.alicdn.com/t/font_1474435587_2002208.eot);src:url(http://at.alicdn.com/t/font_1474435587_2002208.eot?#iefix) format('embedded-opentype'),url(font_1474435587_2002208.woff) format('woff'),url(http://at.alicdn.com/t/font_1474435587_2002208.ttf) format('truetype'),url(http://at.alicdn.com/t/font_1474435587_2002208.svg#JHSIconfont) format('svg')
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+

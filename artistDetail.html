@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no, minimal-ui">
+	<title>音乐播放器</title>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+ 
+    <link rel="stylesheet" href="dist/base.css">
+    <link rel="stylesheet" href="dist/common.css">
+    <link rel="stylesheet" href="dist/artistDetail.css">
+    <link rel="stylesheet" href="public/iconfont/iconfont.css">
+    <link rel="stylesheet" href="public/css/audio.css">
+</head>
+<style>
+	*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+}
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.ui-tabs__header-items{
+	background-color: #fff;
+}
+.ui-button--type-secondary.has-dropdown-open, .ui-button--type-secondary.has-focus-ring:focus, .ui-button--type-secondary:hover:not(.is-disabled), body[modality=keyboard] .ui-button--type-secondary:focus {
+    background:none!important;
+}
+.ui-tab-header-item:hover {
+     background: none !important; 
+}
+.ui-tab-header-item__text {
+    font-size: 0.32rem !important;
+}
+.ui-tab-header-item {
+	padding: 0.24rem !important;
+	min-width: 1.12rem !important;
+  	height: 0.96rem !important;
+}
+.ui-tabs__active-tab-indicator {
+    height: 2px;
+}
+.ui-tabs__body {
+     border: none !important; 
+     padding: 0 !important; 
+}
+.ui-icon-button, .ui-icon-button .ui-icon-button__focus-ring {
+    height: 100%;
+    width: auto;
+    padding: 8px;
+}
+.ui-tabs__header.fixedTop{
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.ui-tabs__header.fixedTop+.ui-tabs__body{
+     padding-top: 0.96rem!important;
+}
+.ui-tabs__header-items .ui-tab-header-item {
+    padding: 0.18rem !important;
+    min-width: 1.12rem !important;
+    height: 0.82rem !important;
+}
+.ui-tab-header-item .ui-tab-header-item__text{
+    font-size: 0.28rem !important;
+}
+html {
+    font-size: 100%;
+}
+</style>
+<body>
+	<div id="app">
+	 <!-- <nv-head></nv-head>
+	  <div>
+	  	<router-view></router-view>
+	  </div>	 -->
+	  <artist-detail></artist-detail>	 
+	</div>
+	
+	<script src="dist/common.build.js"></script>
+	<script src="dist/artistDetail.build.js"></script>
+</body>
+</html>

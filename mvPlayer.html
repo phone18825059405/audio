@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+	<title>音乐播放器</title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <link rel="stylesheet" href="dist/base.css">
+    <link rel="stylesheet" href="dist/common.css">
+    <link rel="stylesheet" href="dist/mvPlayer.css">
+    
+</head>
+<style>
+	*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+	background: #f2f2f2;
+}
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.56rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+/* fallback */
+html {
+    font-size: 100%;
+}
+</style>
+<body>
+	<div id="app">
+	 <!-- <nv-head></nv-head>
+	  <div>
+	  	<router-view></router-view>
+	  </div>	 -->
+	  <mv-player></mv-player>	 
+	</div>
+	
+	<script src="dist/common.build.js"></script>
+	<script src="dist/mvPlayer.build.js"></script>
+</body>
+</html>
